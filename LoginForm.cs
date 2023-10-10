@@ -15,10 +15,11 @@ namespace IBLab1
         ADMIN,
         NOADMIN
     };
-    public partial class Login : Form
+    public partial class LoginForm : Form
     {
         private User user_;
-        public Login()
+        private int counter_ = 0;
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -39,7 +40,20 @@ namespace IBLab1
                 }
                 if(user_.Password!=passwordTB_.Text)
                 {
-                    MessageBox.Show("Ты еблан!","Ошибка!",)
+                    counter_++;
+                    if(counter_ == 3) 
+                    {
+                        Application.Exit();
+                    }
+                    MessageBox.Show("Wrong login/password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    passwordTB_.Text = "";
+                    loginTB_.Text = "";
+                }
+                else
+                {
+                    counter_ = 0;
+                    var cabinet = new Cabinet(user_);
+                    cabinet.ShowDialog();
                 }
             }
         }

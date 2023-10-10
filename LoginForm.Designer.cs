@@ -1,6 +1,6 @@
 ﻿namespace IBLab1
 {
-    partial class Login
+    partial class LoginForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.

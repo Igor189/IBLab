@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace IBLab1
 {
-    internal interface User
+    public interface User
     {
         string Login { get; set; }
-        string Password { get; set; }
+        string Password { get; }
     }
 }

@@ -8,7 +8,7 @@ namespace IBLab1
 {
     internal class NoAdmin : User
     {
-        public string Login { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Password { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Login { get; set; }
+        public string Password { get; private  set; }
     }
 }
