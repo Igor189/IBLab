@@ -35,7 +35,7 @@
 
             if (accountManager.IsUserExist(User) && accountManager.IsFirstLogin(User.Username))
             {
-                var secondPasswordForm = new EnterPasswordAgainForm(User.Username, User.Password);
+                var secondPasswordForm = new RepeatPwdForm(User.Username, User.Password);
                 secondPasswordForm.ShowDialog();
                 if (secondPasswordForm.Result != DialogResult.OK) return;
             }

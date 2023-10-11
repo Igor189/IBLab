@@ -36,6 +36,7 @@ namespace IBLab1
                 aes.KeySize = KEYSIZE;
                 aes.BlockSize = BLOCKSIZE;
                 aes.Mode = MODE;
+                aes.GenerateIV();
 
                 var key = new Rfc2898DeriveBytes(_password, aes.IV, 1000, HashAlgorithmName.SHA512);
                 aes.Key = key.GetBytes(aes.KeySize / 8);
@@ -52,6 +53,7 @@ namespace IBLab1
                 }
             }
         }
+
 
         public static MemoryStream DecryptFile(string password)
         {

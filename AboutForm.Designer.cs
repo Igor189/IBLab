@@ -49,7 +49,7 @@
             label2.TabIndex = 1;
             label2.Text = "Шабардин И.О. ИДБ-20-11";
             // 
-            // AboutBox
+            // AboutForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -57,15 +57,15 @@
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "AboutBox";
-            Padding = new Padding(10, 10, 10, 10);
+            Name = "AboutForm";
+            Padding = new Padding(10);
             ShowIcon = false;
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterParent;
-            Text = "О программе";
+            Text = "About";
             ResumeLayout(false);
             PerformLayout();
         }

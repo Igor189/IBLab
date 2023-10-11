@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace IBLab1
 {
-    public partial class EnterPasswordAgainForm : Form
+    public partial class RepeatPwdForm : Form
     {
         private Password _firstPassword;
         private string _username;
@@ -18,12 +18,11 @@ namespace IBLab1
 
         public DialogResult Result { get; private set; }
 
-        public EnterPasswordAgainForm(string username, Password password)
+        public RepeatPwdForm(string username, Password password)
         {
             InitializeComponent();
             _username = username;
             _firstPassword = password;
-            loginTextBox.TextChanged += Clear;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,7 +33,7 @@ namespace IBLab1
         private void loginButton_Click(object sender, EventArgs e)
         {
             var secondPassword = new Password { Value = loginTextBox.Text };
-            if (_firstPassword.IsSamePassword(secondPassword) && 
+            if (_firstPassword.IsSamePassword(secondPassword) &&
                 accountManager.IsCorrenspondsRestricts(_username, secondPassword))
             {
                 Result = DialogResult.OK;
@@ -42,18 +41,12 @@ namespace IBLab1
             }
             else if (!_firstPassword.IsSamePassword(secondPassword))
             {
-                label3.Visible = true;
+                MessageBox.Show("Password mismatch!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                label2.Visible = true;
+                MessageBox.Show("The password does not match the restriction!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void Clear(object? sender, EventArgs e)
-        {
-            label2.Visible = false;
-            label3.Visible = false;
         }
 
         private void loginTextBox_TextChanged(object sender, EventArgs e)
