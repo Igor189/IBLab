@@ -26,7 +26,7 @@ namespace IBLab1
 
             dataGridView1.DataSource = _users;
             dataGridView1.Columns[1].Visible = false;
-            dataGridView1.Columns["Username"].HeaderText = "Имя пользователя";
+            dataGridView1.Columns["Username"].HeaderText = "User name";
             dataGridView1.Columns["Username"].ReadOnly = true;
 
             string searchValue = "ADMIN";
@@ -46,13 +46,14 @@ namespace IBLab1
                 dataGridView1.Rows[rowIndex].Cells["IsBlocked"].ReadOnly = true;
             }
 
-            dataGridView1.Columns["IsBlocked"].HeaderText = "Заблокирован";
-            dataGridView1.Columns["IsPasswordLimit"].HeaderText = "Ограничение на пароль";
+            dataGridView1.Columns["IsBlocked"].HeaderText = "Blocked";
+            dataGridView1.Columns["IsPasswordLimit"].HeaderText = "Password Limit";
         }
 
         private void loginButton_Click(object sender, EventArgs e)
         {
             accountManager.SaveAll(_users);
+            MessageBox.Show("Saving was successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

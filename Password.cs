@@ -18,7 +18,7 @@ namespace IBLab1
                 if (this._password == "")
                     return _password;
 
-                Regex regex = new Regex(@"^\$2[abyx]\$\d{2}\$[./A-Za-z0-9]{53}$");
+                Regex regex = new Regex(@"^\$2[abyx]\$\d{2}\$[./A-Za-z0-9]{53}$"); ;
                 bool isBcryptHash = regex.IsMatch(_password);
                 if (isBcryptHash)
                     return _password;
@@ -36,10 +36,11 @@ namespace IBLab1
         {
             get
             {
-                bool hasLetter = Regex.IsMatch(_password, "[a-zA-Z]");
                 bool hasDigit = Regex.IsMatch(_password, "[0-9]");
+                bool hasPunctuation = Regex.IsMatch(_password, "[.,;:!?'\"-]");
+                bool hasMathSymbols = Regex.IsMatch(_password, "[+\\-*/=]");
 
-                return hasLetter && hasDigit;
+                return hasPunctuation && hasDigit && hasMathSymbols;
             }
         }
 

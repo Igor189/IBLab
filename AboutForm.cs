@@ -14,7 +14,6 @@ namespace IBLab1
         public AboutForm()
         {
             InitializeComponent();
-            this.Text = String.Format("О программе {0}", AssemblyTitle);
         }
 
         #region Методы доступа к атрибутам сборки
