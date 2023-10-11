@@ -1,4 +1,4 @@
-﻿namespace IBLab1
+﻿namespace IB
 {
     partial class ShowUsersForm
     {
@@ -48,16 +48,16 @@
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 90F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.Size = new Size(1040, 576);
+            tableLayoutPanel1.Size = new Size(775, 449);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // loginButton
             // 
             loginButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             loginButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            loginButton.Location = new Point(414, 521);
+            loginButton.Location = new Point(282, 407);
             loginButton.Name = "loginButton";
-            loginButton.Size = new Size(211, 52);
+            loginButton.Size = new Size(211, 39);
             loginButton.TabIndex = 5;
             loginButton.Text = "Save";
             loginButton.UseVisualStyleBackColor = true;
@@ -75,18 +75,18 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(1034, 512);
+            dataGridView1.Size = new Size(769, 398);
             dataGridView1.TabIndex = 0;
             // 
-            // AllUsersForm
+            // ShowUsersForm
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1040, 576);
+            ClientSize = new Size(775, 449);
             Controls.Add(tableLayoutPanel1);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(4);
-            Name = "AllUsersForm";
+            Name = "ShowUsersForm";
             Text = "All users";
             Load += AllUsersForm_Load;
             tableLayoutPanel1.ResumeLayout(false);

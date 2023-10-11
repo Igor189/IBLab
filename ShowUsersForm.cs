@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IBLab1
+namespace IB
 {
     public partial class ShowUsersForm : Form
     {
         private List<User> _users = new List<User>();
-        private static AccountManager accountManager = Singleton<AccountManager>.GetValue();
+        private static AccountManager accountManager = Singleton<AccountManager>.Instance;
 
         public ShowUsersForm()
         {

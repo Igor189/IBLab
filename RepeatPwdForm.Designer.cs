@@ -1,4 +1,4 @@
-﻿namespace IBLab1
+﻿namespace IB
 {
     partial class RepeatPwdForm
     {

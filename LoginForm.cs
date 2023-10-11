@@ -1,13 +1,13 @@
-﻿namespace IBLab1
+﻿namespace IB
 {
     public partial class LoginForm : Form
     {
-        private static AccountManager accountManager = Singleton<AccountManager>.GetValue();
         public DialogResult Result { get; private set; }
         public UserState Role { get; private set; }
         public User? User { get; private set; }
 
-        private int authCnt = 0;
+        private int counter_ = 0;
+        private static AccountManager accountManager_ = Singleton<AccountManager>.Instance;
 
         public LoginForm()
         {
@@ -33,34 +33,34 @@
                 return;
             }
 
-            if (accountManager.IsUserExist(User) && accountManager.IsFirstLogin(User.Username))
+            if (accountManager_.IsUserExist(User) && accountManager_.IsFirstLogin(User.Username))
             {
                 var secondPasswordForm = new RepeatPwdForm(User.Username, User.Password);
                 secondPasswordForm.ShowDialog();
                 if (secondPasswordForm.Result != DialogResult.OK) return;
             }
 
-            if (accountManager.Login(User))
+            if (accountManager_.Login(User))
             {
-                if (accountManager.IsUserExist(User) && accountManager.GetUser(User).IsBlocked)
+                if (accountManager_.IsUserExist(User) && accountManager_.GetUser(User).IsBlocked)
                 {
                     MessageBox.Show("Your account is blocked!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 if (loginTb_.Text == "ADMIN")
-                    Role = UserState.ADMIN;
+                    Role = UserState.Admin;
                 else
-                    Role = UserState.USER;
+                    Role = UserState.User;
 
-                if (!accountManager.IsCorrenspondsRestricts(User.Username, User.Password))
+                if (!accountManager_.IsCorrenspondsRestricts(User.Username, User.Password))
                 {
                     var res = MessageBox.Show("Your password does not meet the requirements! Change password?", "Warning",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     if (res == DialogResult.Yes)
                     {
-                        var changePasswordForm = new ChangePasswordForm(accountManager.GetUser(User));
+                        var changePasswordForm = new ChangePasswordForm(accountManager_.GetUser(User));
                         changePasswordForm.ShowDialog();
                     }
                 }
@@ -71,10 +71,10 @@
             else
             {
                 MessageBox.Show("Wrong login or password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                authCnt++;
+                counter_++;
             }
 
-            if (authCnt >= 3)
+            if (counter_ >= 3)
             {
                 Application.Exit();
             }

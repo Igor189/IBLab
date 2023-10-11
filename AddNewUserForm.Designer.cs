@@ -1,4 +1,4 @@
-﻿namespace IBLab1
+﻿namespace IB
 {
     partial class AddNewUserForm
     {
@@ -38,7 +38,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(136, 23);
+            textBox1.Location = new Point(90, 11);
             textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(150, 29);
@@ -49,7 +49,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(79, 27);
+            label1.Location = new Point(33, 15);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(53, 20);
@@ -59,7 +59,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(198, 105);
+            button1.Location = new Point(156, 82);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(114, 31);
@@ -71,7 +71,7 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(44, 105);
+            button2.Location = new Point(9, 82);
             button2.Margin = new Padding(2);
             button2.Name = "button2";
             button2.Size = new Size(114, 31);
@@ -84,7 +84,7 @@
             // 
             checkBox1.AutoSize = true;
             checkBox1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox1.Location = new Point(88, 67);
+            checkBox1.Location = new Point(18, 55);
             checkBox1.Margin = new Padding(2);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(198, 23);
@@ -96,7 +96,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(356, 151);
+            ClientSize = new Size(286, 119);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);

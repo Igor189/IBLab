@@ -1,4 +1,4 @@
-﻿namespace IBLab1
+﻿namespace IB
 {
     public partial class UserForm : Form
     {
@@ -12,7 +12,7 @@
             this.FormClosing += new FormClosingEventHandler(Form_Closing);
             _user = user;
 
-            if (role == UserState.USER)
+            if (role == UserState.User)
             {
                 newUserBtn_.Enabled = false;
                 allUsersBtn_.Enabled = false;
@@ -52,7 +52,7 @@
             allUsersForm.ShowDialog();
         }
 
-        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
+        private void About_Click(object sender, EventArgs e)
         {
             using (AboutForm box = new AboutForm())
             {

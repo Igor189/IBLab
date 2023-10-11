@@ -1,16 +1,12 @@
-﻿namespace IBLab1
+﻿namespace IB
 {
-    public static class Singleton<T> where T : new()
-    {
-        private static T? value;
-        public static T GetValue()
-        {
-            if (value == null)
-            {
-                value = new T();
-            }
+    public class Singleton<T> where T : new()
+{
+    private static readonly Lazy<T> instance = new Lazy<T>(() => new T());
 
-            return value;
-        }
+    public static T Instance
+    {
+        get { return instance.Value; }
     }
+}
 }

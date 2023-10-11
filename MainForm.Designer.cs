@@ -1,4 +1,4 @@
-﻿namespace IBLab1
+﻿namespace IB
 {
     partial class MainForm
     {
@@ -35,7 +35,7 @@
             // loginBtn_
             // 
             loginBtn_.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            loginBtn_.Location = new Point(76, 39);
+            loginBtn_.Location = new Point(33, 15);
             loginBtn_.Margin = new Padding(2);
             loginBtn_.Name = "loginBtn_";
             loginBtn_.Size = new Size(200, 44);
@@ -47,7 +47,7 @@
             // exitBtn_
             // 
             exitBtn_.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            exitBtn_.Location = new Point(76, 113);
+            exitBtn_.Location = new Point(33, 72);
             exitBtn_.Margin = new Padding(2);
             exitBtn_.Name = "exitBtn_";
             exitBtn_.Size = new Size(200, 44);
@@ -60,7 +60,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(357, 219);
+            ClientSize = new Size(277, 144);
             Controls.Add(exitBtn_);
             Controls.Add(loginBtn_);
             FormBorderStyle = FormBorderStyle.FixedSingle;

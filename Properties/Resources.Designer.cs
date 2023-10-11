@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IBLab1.Properties {
+namespace IB.Properties {
     using System;
     
     

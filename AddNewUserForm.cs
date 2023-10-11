@@ -1,8 +1,8 @@
-﻿namespace IBLab1
+﻿namespace IB
 {
     public partial class AddNewUserForm : Form
     {
-        private static AccountManager accountManager = Singleton<AccountManager>.GetValue();
+        private static AccountManager accountManager = Singleton<AccountManager>.Instance;
 
         public AddNewUserForm()
         {

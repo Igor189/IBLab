@@ -1,8 +1,8 @@
-﻿namespace IBLab1
+﻿namespace IB
 {
     public partial class ChangePasswordForm : Form
     {
-        private static AccountManager accountManager = Singleton<AccountManager>.GetValue();
+        private static AccountManager accountManager = Singleton<AccountManager>.Instance;
         private User _user;
 
         public ChangePasswordForm(User user)
@@ -26,24 +26,24 @@
                 return;
             }
 
-            if (!accountManager.IsPasswordUnique(_user, new Password { Value = oldPwTb_.Text }))
+            if (!accountManager.IsPwdUnique(_user, new Password { Value = oldPwTb_.Text }))
             {
                 MessageBox.Show("Incorrect password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if(!accountManager.IsCorrenspondsRestricts(_user.Username, new Password { Value=newPwdTb_.Text}))
+            if (!accountManager.IsCorrenspondsRestricts(_user.Username, new Password { Value = newPwdTb_.Text }))
             {
                 MessageBox.Show("Your password does not meet the restrictions!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
-            
-                accountManager.ChangePassword(_user, new Password { Value = newPwdTb_.Text });
 
-                MessageBox.Show("Password changed!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            
+
+            accountManager.ChangePwd(_user, new Password { Value = newPwdTb_.Text });
+
+            MessageBox.Show("Password changed!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+
         }
 
         private void button1_Click(object sender, EventArgs e)

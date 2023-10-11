@@ -1,4 +1,4 @@
-﻿namespace IBLab1
+﻿namespace IB
 {
     partial class LoginForm
     {
@@ -39,8 +39,8 @@
             // loginTb_
             // 
             loginTb_.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            loginTb_.Location = new Point(108, 37);
-            loginTb_.Margin = new Padding(2, 2, 2, 2);
+            loginTb_.Location = new Point(108, 11);
+            loginTb_.Margin = new Padding(2);
             loginTb_.Name = "loginTb_";
             loginTb_.Size = new Size(160, 29);
             loginTb_.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(48, 39);
+            label1.Location = new Point(48, 13);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(49, 21);
@@ -61,7 +61,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(21, 75);
+            label2.Location = new Point(21, 49);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(76, 21);
@@ -71,8 +71,8 @@
             // applyeBtn_
             // 
             applyeBtn_.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            applyeBtn_.Location = new Point(167, 144);
-            applyeBtn_.Margin = new Padding(2, 2, 2, 2);
+            applyeBtn_.Location = new Point(167, 93);
+            applyeBtn_.Margin = new Padding(2);
             applyeBtn_.Name = "applyeBtn_";
             applyeBtn_.Size = new Size(101, 31);
             applyeBtn_.TabIndex = 4;
@@ -83,8 +83,8 @@
             // cancelBtn_
             // 
             cancelBtn_.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cancelBtn_.Location = new Point(37, 144);
-            cancelBtn_.Margin = new Padding(2, 2, 2, 2);
+            cancelBtn_.Location = new Point(37, 93);
+            cancelBtn_.Margin = new Padding(2);
             cancelBtn_.Name = "cancelBtn_";
             cancelBtn_.Size = new Size(101, 31);
             cancelBtn_.TabIndex = 5;
@@ -95,8 +95,8 @@
             // pwdTb_
             // 
             pwdTb_.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            pwdTb_.Location = new Point(108, 72);
-            pwdTb_.Margin = new Padding(2, 2, 2, 2);
+            pwdTb_.Location = new Point(108, 46);
+            pwdTb_.Margin = new Padding(2);
             pwdTb_.Name = "pwdTb_";
             pwdTb_.PasswordChar = '*';
             pwdTb_.Size = new Size(160, 29);
@@ -107,7 +107,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(313, 182);
+            ClientSize = new Size(313, 139);
             Controls.Add(pwdTb_);
             Controls.Add(cancelBtn_);
             Controls.Add(applyeBtn_);
@@ -115,7 +115,7 @@
             Controls.Add(label1);
             Controls.Add(loginTb_);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             MaximizeBox = false;
             Name = "LoginForm";
             Text = "LoginForm";

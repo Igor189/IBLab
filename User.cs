@@ -1,7 +1,18 @@
-﻿namespace IBLab1
+﻿namespace IB
 {
+    public enum UserState
+    {
+        User,
+        Admin,
+    }
     public class User
     {
+        public string? Username { get; private set; }
+        public Password Password { get; set; }
+
+        public bool IsBlocked { get; set; }
+        public bool IsPasswordLimit { get; set; }
+
         public User(string username, string? password)
         {
             Username = username;
@@ -24,13 +35,7 @@
             IsBlocked = isBlocked;
             IsPasswordLimit = isPasswordLimit;
         }
-
-        public string? Username { get; private set; }
-        public Password Password { get; set; }
-
-        public bool IsBlocked { get; set; }
-        public bool IsPasswordLimit { get; set; }
-        
+  
         public override string ToString()
         {
             return $"{Username} {Password.Value} {IsBlocked} {IsPasswordLimit} {Password.IsPasswordCorrespondsRestriction}";
@@ -43,11 +48,6 @@
             var user = obj as User;
 
             return this.Username == user.Username;
-        }
-
-        public override int GetHashCode()
-        {
-            return Username.GetHashCode();
         }
     }
 }

@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IBLab1
+namespace IB
 {
     public partial class RepeatPwdForm : Form
     {
         private Password _firstPassword;
         private string _username;
-        private static AccountManager accountManager = Singleton<AccountManager>.GetValue();
+        private static AccountManager accountManager = Singleton<AccountManager>.Instance;
 
         public DialogResult Result { get; private set; }
 

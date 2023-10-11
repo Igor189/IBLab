@@ -1,25 +1,18 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IBLab1
+﻿
+namespace IB
 {
     internal class AccountManager
     {
-        private static DatabaseRepository database = Singleton<DatabaseRepository>.GetValue();
+        private static DatabaseRepository database = Singleton<DatabaseRepository>.Instance;
 
         public bool Login(User user)
         {
             if (database.IsUserExists(user) && database.IsFirstLogin(user.Username))
             {
-                database.ChangePassword(user, user.Password);
+                database.ChangePwd(user, user.Password);
             }
 
-            return database.IsUserExists(user) && database.IsPasswordCorrect(user);
+            return database.IsUserExists(user) && database.IsCorrectPwd(user);
         }
 
         public bool IsFirstLogin(string username)
@@ -32,14 +25,14 @@ namespace IBLab1
             return database.IsUserExists(user);
         }
 
-        public bool IsPasswordUnique(User user, Password oldPassword)
+        public bool IsPwdUnique(User user, Password oldPassword)
         {
             return user.Password.IsSamePassword(oldPassword);
         }
 
-        public void ChangePassword(User user, Password newPassword)
+        public void ChangePwd(User user, Password newPassword)
         {  
-            database.ChangePassword(user, newPassword);
+            database.ChangePwd(user, newPassword);
         }
 
         public void AddUser(User user)
@@ -72,7 +65,7 @@ namespace IBLab1
 
         public void EncryptAll()
         {
-            database.EncryptStream();
+            database.Encrypt();
         }
     }
 }

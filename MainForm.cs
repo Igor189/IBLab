@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IBLab1
+namespace IB
 {
     public partial class MainForm : Form
     {
-        private static AccountManager accountManager = Singleton<AccountManager>.GetValue();
+        private static AccountManager accountManager = Singleton<AccountManager>.Instance;
 
         public MainForm()
         {

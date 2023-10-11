@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IBLab1
+namespace IB
 {
     public partial class DecryptForm : Form
     {
@@ -24,19 +24,19 @@ namespace IBLab1
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            if (!CryptoAPI.CheckPassword(passwordTextBox.Text))
+            if (!CryptoAPI.IsPasswordValid(passwordTextBox.Text))
             {
-                MessageBox.Show("Неверный пароль!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Incorrect password!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
                 return;
             }
             try
             {
-                DatabaseRepository.MemoryStream = CryptoAPI.DecryptFile(passwordTextBox.Text);
+                DatabaseRepository.MemoryStream = CryptoAPI.DecryptData(passwordTextBox.Text);
             }
             catch
             {
-                MessageBox.Show("Ошибка в расшифровке файла!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error in decrypting file!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
                 return;
             }

@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IBLab1
+namespace IB
 {
     partial class AboutForm : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace IBLab1
+﻿namespace IB
 {
     partial class ChangePasswordForm
     {
@@ -41,8 +41,8 @@
             // oldPwTb_
             // 
             oldPwTb_.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            oldPwTb_.Location = new Point(146, 42);
-            oldPwTb_.Margin = new Padding(2, 2, 2, 2);
+            oldPwTb_.Location = new Point(200, 11);
+            oldPwTb_.Margin = new Padding(2);
             oldPwTb_.Name = "oldPwTb_";
             oldPwTb_.PasswordChar = '*';
             oldPwTb_.Size = new Size(196, 29);
@@ -52,8 +52,8 @@
             // newPwdTb_
             // 
             newPwdTb_.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            newPwdTb_.Location = new Point(146, 79);
-            newPwdTb_.Margin = new Padding(2, 2, 2, 2);
+            newPwdTb_.Location = new Point(200, 48);
+            newPwdTb_.Margin = new Padding(2);
             newPwdTb_.Name = "newPwdTb_";
             newPwdTb_.PasswordChar = '*';
             newPwdTb_.Size = new Size(196, 29);
@@ -63,11 +63,11 @@
             // confirmTb_
             // 
             confirmTb_.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            confirmTb_.Location = new Point(220, 116);
-            confirmTb_.Margin = new Padding(2, 2, 2, 2);
+            confirmTb_.Location = new Point(200, 90);
+            confirmTb_.Margin = new Padding(2);
             confirmTb_.Name = "confirmTb_";
             confirmTb_.PasswordChar = '*';
-            confirmTb_.Size = new Size(160, 29);
+            confirmTb_.Size = new Size(196, 29);
             confirmTb_.TabIndex = 4;
             confirmTb_.TextChanged += repeatNewPasswordTextbox_TextChanged;
             // 
@@ -75,7 +75,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(16, 45);
+            label1.Location = new Point(14, 14);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(103, 20);
@@ -86,7 +86,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(16, 79);
+            label2.Location = new Point(14, 52);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(109, 20);
@@ -97,7 +97,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(16, 119);
+            label3.Location = new Point(11, 94);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new Size(157, 20);
@@ -107,8 +107,8 @@
             // applyBtn_
             // 
             applyBtn_.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            applyBtn_.Location = new Point(246, 163);
-            applyBtn_.Margin = new Padding(2, 2, 2, 2);
+            applyBtn_.Location = new Point(246, 138);
+            applyBtn_.Margin = new Padding(2);
             applyBtn_.Name = "applyBtn_";
             applyBtn_.Size = new Size(150, 31);
             applyBtn_.TabIndex = 9;
@@ -119,8 +119,8 @@
             // cancelBtn_
             // 
             cancelBtn_.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cancelBtn_.Location = new Point(6, 163);
-            cancelBtn_.Margin = new Padding(2, 2, 2, 2);
+            cancelBtn_.Location = new Point(6, 138);
+            cancelBtn_.Margin = new Padding(2);
             cancelBtn_.Name = "cancelBtn_";
             cancelBtn_.Size = new Size(150, 31);
             cancelBtn_.TabIndex = 10;
@@ -132,7 +132,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(407, 209);
+            ClientSize = new Size(407, 183);
             Controls.Add(cancelBtn_);
             Controls.Add(applyBtn_);
             Controls.Add(label3);
@@ -142,7 +142,7 @@
             Controls.Add(newPwdTb_);
             Controls.Add(oldPwTb_);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             MaximizeBox = false;
             Name = "ChangePasswordForm";
             Text = "Change Password";
