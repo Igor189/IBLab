@@ -35,5 +35,11 @@ namespace IBLab1
             var changePwd = new ChangePasswordForm();
             changePwd.ShowDialog();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var about = new AboutForm();
+            about.ShowDialog();
+        }
     }
 }
